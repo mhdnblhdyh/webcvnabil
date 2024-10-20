@@ -6,6 +6,7 @@
     <title>Personal CV - Muhammad Nabil Hidayah</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome untuk ikon -->
 </head>
 <body>
     <header class="fade-in">
@@ -20,6 +21,7 @@
     </header>
 
     <nav class="slide-in">
+        <div class="hamburger">&#9776;</div> <!-- Tombol hamburger -->
         <ul class="nav-links">
             <li><a href="#about">About Me</a></li>
             <li><a href="#education">Education</a></li>
@@ -29,7 +31,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-
+    
     <section id="about" class="fade-in-up">
         <div class="container">
             <h2>About Me</h2>
@@ -95,16 +97,46 @@
     <section id="contact" class="fade-in-up">
         <div class="container">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:mhdnabilhidayah@gmail.com">mhdnabilhidayah@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/mhd-nabil-hidayah-8a4116334/" target="_blank">linkedin.com/in/mhdnabilhidayah</a></p>
-            <p>GitHub: <a href="https://github.com/spvnabil/" target="_blank">github.com/spvnabil</a></p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>Email: <a href="mailto:mhdnabilhidayah@gmail.com">mhdnabilhidayah@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <p>GitHub: <a href="https://github.com/spvnabil/" target="_blank">github.com/spvnabil</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/mhd-nabil-hidayah-8a4116334/" target="_blank">linkedin.com/in/mhdnabilhidayah</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                    <p>Instagram: <a href="https://www.instagram.com/nblhdyh_/" target="_blank">instagram.com/nblhdyh</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <p>WhatsApp: <a href="https://wa.me/6281271787363" target="_blank">Chat on WhatsApp</a></p>
+                </div>
+            </div>
         </div>
     </section>
-    
     <footer class="fade-in">
         <div class="container">
-            <p>&copy; Muhammad Nabil Hidayah. All Rights Reserved.</p>
+            <p>Copyright © 2024 - Muhammad Nabil Hidayah,All Rights Reserved</p>
         </div>
     </footer>
-</body>
+
+    <script src="scrip"></script> 
+<script>
+ 
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+   
+    hamburger.addEventListener('click', () => {
+       
+        navLinks.classList.toggle('active');
+    });
+</script>
 </html>
