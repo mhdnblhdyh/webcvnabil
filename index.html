@@ -69,7 +69,26 @@
             </ul>
         </div>
     </section>
-
+    <section id="certificates" class="fade-in-up">
+        <div class="container">
+            <h2>Certificates</h2>
+            <div class="certificate-container">
+                <div class="certificate">
+                    <h3>Internship Certificate from PT INALUM</h3>
+                    <img src="INALUM.jpg" alt="Internship Certificate" class="certificate-img">
+                </div>
+                <div class="certificate">
+                    <h3>LSP Certificate from UKK</h3>
+                    <img src="LSP NUSANTARA.jpg" alt="LSP Certificate" class="certificate-img">
+                </div>
+                <div class="certificate">
+                    <h3>Internship Certificate from CV. AJ Com</h3>
+                    <img src="PKL.jpg" alt="CV. AJ Com Certificate" class="certificate-img">
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section id="skills" class="fade-in-up">
         <div class="container">
             <h2>Skills</h2>
@@ -121,6 +140,7 @@
             </div>
         </div>
     </section>
+    
     <footer class="fade-in">
         <div class="container">
             <p>Copyright © 2024 - Muhammad Nabil Hidayah,All Rights Reserved</p>
@@ -128,15 +148,34 @@
     </footer>
 
     <script src="scrip"></script> 
-<script>
- 
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    <script>
+      // Toggle navigation menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
 
-   
-    hamburger.addEventListener('click', () => {
-       
-        navLinks.classList.toggle('active');
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Smooth scroll for navigation
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);  // Mengambil ID dari link navigasi
+        const targetElement = document.getElementById(targetId);
+
+        // Scroll ke elemen target
+        targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+
+        // Close the menu after click on smaller screens
+        navLinks.classList.remove('active');
     });
-</script>
+});
+
+    </script>
+    
 </html>
